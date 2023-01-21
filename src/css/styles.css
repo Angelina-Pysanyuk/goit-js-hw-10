@@ -18,3 +18,31 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flag {
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+}
+
+.name {
+  color: rgb(79, 78, 78);
+}
+
+.title {
+  font-weight: bold;
+  margin-right: 10px;
+  color: rgb(79, 78, 78);
+}
