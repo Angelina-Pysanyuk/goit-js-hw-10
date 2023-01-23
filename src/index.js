@@ -17,8 +17,9 @@ function onUserInput(event) {
       .then(createMarkup)
       .catch(error => {
         if (error.message === '404') {
-          Notiflix.Notify.info('Oops, there is no country with that name');
+          Notiflix.Notify.failure('Oops, there is no country with that name');
           countriesInfoCard.innerHTML = '';
+          countriesList.innerHTML = '';
         }
       });
   }
@@ -31,7 +32,7 @@ function createMarkup(data) {
 
   if (data.length >= 2 && data.length <= 10) renderMarkup(data);
   else if (data.length > 10) {
-    Notiflix.Notify.failure(
+    Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
   } else addCountryCard(country);
